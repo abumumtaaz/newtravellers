@@ -2,33 +2,55 @@
     ViewBag.Title = "About";
 }
 
-<hgroup class="title">
-    <h1>@ViewBag.Title.</h1>
-    <h2>@ViewBag.Message</h2>
-</hgroup>
+@section featured{
+    <div class="mg-page-title parallax">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>About Us</h2>
+                    @*<p>Cogitavisse erant puerilis utrum efficiantur adhuc expeteretur.</p>*@
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mg-about-features">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <p>Thank you for choosing new travellers lodge and suites. Our hotel is located in the heart of Lagos state, the commercial city of Nigeria. We offer interstate bus terminals and in only 20minutes drive from the muritala muhammed international airport, ikeja, Lagos.</p>
 
-<article>
-    <p>
-        Use this area to provide additional information.
-    </p>
+                    <hr />
+                </div>
+                <div class="col-sm-12">
+                    <div class="mg-feature">
+                        <p>
+                            New travellers lodge is located along Lagos-Abeokuta expressway,20 minutes from the international
+                            airport and 15minutes to the centre of ikeja the capital of lagos state.
+                            Its just a 3minutes walk to the Iyana ipaja motor park which is home to different interstate and
+                            intercountry bus terminals,bus rapid transport(BRT) park and so many banks and eateries and other
+                            commercial and steel trading activities
+                        </p>
+                    </div>
+                    <div class="row">
+                        <h2 class="mg-widget-title">Contact US</h2>
+                            <address>
+                                <strong>New Travellers Lodge</strong><br>
+                                161 Lagos Abeokuta expressway, araromi bus-stop beside access bank iyana-ipaja, lagos state.
+                            </address>
 
-    <p>
-        Use this area to provide additional information.
-    </p>
+                            <p>
+                                +2348025872871<br/>
+                                +2347066922381<br/>
+                                +2348023601362
+                            </p>
 
-    <p>
-        Use this area to provide additional information.
-    </p>
-</article>
+                            <p>
+                                <a href="mailto:newtravellers@gmail.com">newtravellers@gmail.com</a>
+                            </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<aside>
-    <h3>Aside Title</h3>
-    <p>
-        Use this area to provide additional information.
-    </p>
-    <ul>
-        <li>@Html.ActionLink("Home", "Index", "Home")</li>
-        <li>@Html.ActionLink("About", "About", "Home")</li>
-        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-    </ul>
-</aside>
+}
