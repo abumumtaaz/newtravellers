@@ -48,16 +48,11 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="#">
-                        <img src="~/Content/images/logo.png" alt="logo"></a>
+                        <img src="/Content/images/ntl-logo.png" alt="logo"></a>
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="active"><a href="/Home/Index">Home</a></li>
-                        <li><a href="/Home/Rooms">Rooms</a></li>
-                        <li><a href="/Home/Gallery">Gallery</a></li>
-                        <li><a href="/Home/About">About Us</a></li>
-                    </ul>
+                    @RenderSection("navigation", required:true)
                 </div>
                 <!-- /.navbar-collapse -->
 
@@ -159,7 +154,7 @@
                         </ul>
                     </div>
                     <div class="col-md-6">
-                        <p>&copy; 2015. All rights reserved.</p>
+                        <p>&copy; 2015. All rights reserved. <span class="text-warning">Website developed by: Elektron (yusuf.oguntola@gmail.com, 07061543553)</span></p>
                     </div>
                 </div>
             </div>

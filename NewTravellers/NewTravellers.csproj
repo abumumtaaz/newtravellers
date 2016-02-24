@@ -1473,6 +1473,7 @@
     <Content Include="Content\images\nivo\next_2x.png" />
     <Content Include="Content\images\nivo\prev.png" />
     <Content Include="Content\images\nivo\prev_2x.png" />
+    <Content Include="Content\images\ntl-logo.png" />
     <Content Include="Content\images\page-title.png" />
     <Content Include="Content\images\paid.png" />
     <Content Include="Content\images\paisley.png" />
