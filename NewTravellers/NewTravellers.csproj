@@ -1414,6 +1414,7 @@
     <Content Include="Content\images\comment3.png" />
     <Content Include="Content\images\cur-arrow-left.png" />
     <Content Include="Content\images\cur-arrow-right.png" />
+    <Content Include="Content\images\dicon.ico" />
     <Content Include="Content\images\executive_suite.jpg" />
     <Content Include="Content\images\gallery-01.png" />
     <Content Include="Content\images\gallery-02.png" />
