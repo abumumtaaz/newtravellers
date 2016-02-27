@@ -1,50 +1,73 @@
 ﻿@{
-    ViewBag.Title = "Contact";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<hgroup class="title">
-    <h1>@ViewBag.Title.</h1>
-    <h2>@ViewBag.Message</h2>
-</hgroup>
+@section navigation
+{
+    <ul class="nav navbar-nav navbar-right">
+        <li><a href="/Home/Index">Home</a></li>
+        <li><a href="/Home/Rooms">Rooms</a></li>
+        <li><a href="/Home/Gallery">Gallery</a></li>
+        <li><a href="/Home/About">About Us</a></li>
+        <li class="active"><a href="/Home/Contact">Contact Us</a></li>
+    </ul>
+}
 
-<section class="contact">
-    <header>
-        <h3>Phone</h3>
-    </header>
-    <p>
-        <span class="label">Main:</span>
-        <span>425.555.0100</span>
-    </p>
-    <p>
-        <span class="label">After Hours:</span>
-        <span>425.555.0199</span>
-    </p>
-</section>
+@section featured{
+    <div class="mg-page-title parallax">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>Contact Us</h2>
+                    <p>We would love to hear from you.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<section class="contact">
-    <header>
-        <h3>Email</h3>
-    </header>
-    <p>
-        <span class="label">Support:</span>
-        <span><a href="mailto:Support@example.com">Support@example.com</a></span>
-    </p>
-    <p>
-        <span class="label">Marketing:</span>
-        <span><a href="mailto:Marketing@example.com">Marketing@example.com</a></span>
-    </p>
-    <p>
-        <span class="label">General:</span>
-        <span><a href="mailto:General@example.com">General@example.com</a></span>
-    </p>
-</section>
+    <div class="mg-page">
+        <div class="container">
+            <div class="row">
 
-<section class="contact">
-    <header>
-        <h3>Address</h3>
-    </header>
-    <p>
-        One Microsoft Way<br />
-        Redmond, WA 98052-6399
-    </p>
-</section>
+                <div class="col-md-5">
+                    <h2 class="mg-sec-left-title">Drop us a message!</h2>
+                    <form class="clearfix">
+                        <div class="mg-contact-form-input">
+                            <label for="full-name">Full Name</label>
+                            <input type="text" class="form-control" id="full-name">
+                        </div>
+                        <div class="mg-contact-form-input">
+                            <label for="email">E-mail</label>
+                            <input type="text" class="form-control" id="email">
+                        </div>
+                        <div class="mg-contact-form-input">
+                            <label for="phone">Phone</label>
+                            <input type="text" class="form-control" id="phone">
+                        </div>
+                        <div class="mg-contact-form-input">
+                            <label for="subject">Subject</label>
+                            <input type="text" class="form-control" id="subject">
+                        </div>
+                        <div class="mg-contact-form-input">
+                            <label for="message">Message</label>
+                            <textarea class="form-control" id="message" rows="5"></textarea>
+                        </div>
+                        <input type="submit" class="btn btn-dark-main pull-right" value="Send">
+                    </form>
+                </div>
+                <div class="col-md-7">
+                    <h2 class="mg-sec-left-title">Our Address</h2>
+                    <p>Getting down to our hotel is easier than you think, this is because we are located right inside the heart of Lagos.</p>
+                    <ul class="mg-contact-info">
+                        <li><i class="fa fa-map-marker"></i>161 Lagos Abeokuta expressway, araromi bus-stop beside access bank iyana-ipaja, lagos state.</li>
+                        <li><i class="fa fa-phone"></i>+2348025872871, +2347066922381, +2348023601362</li>
+                        <li><i class="fa fa-envelope"></i><a href="mailto:info@travellerslodge.com.ng">info@travellerslodge.com.ng</a></li>
+                    </ul>
+                    <div>
+                        <img src="~/Content/images/hotel-map.jpg" class="img-responsive" alt="location-map" style="margin-left: 25px; max-height: 500px"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
