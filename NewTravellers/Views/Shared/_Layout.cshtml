@@ -33,6 +33,7 @@
 		<script src="~/Content/js/respond.min.js"></script>
 		<![endif]-->
     <script src="~/Content/js/modernizr.custom.min.js"></script>
+    @RenderSection("morehead", required: false)
 </head>
 <body>
     <header class="header transp sticky">
@@ -146,13 +147,18 @@
                 <div class="row">
 
                     <div class="col-md-6">
-                        <ul class="mg-footer-nav">
+                        @*<ul class="mg-footer-nav">
                             <li><a href="@Url.Action("Index", "Home")">Home</a></li>
                             <li><a href="@Url.Action("Rooms", "Home")">Rooms</a></li>
                             <li><a href="@Url.Action("Gallery", "Home")">Gallery</a></li>
                             <li><a href="@Url.Action("About", "Home")">About Us</a></li>
                             <li><a href="@Url.Action("Contact", "Home")">Contact Us</a></li>
-                        </ul>
+                        </ul>*@
+                        <a href="@Url.Action("Index", "Home")">Home</a>
+                        <a href="@Url.Action("Rooms", "Home")">Rooms</a>
+                        <a href="@Url.Action("Gallery", "Home")">Gallery</a>
+                        <a href="@Url.Action("About", "Home")">About Us</a>
+                        <a href="@Url.Action("Contact", "Home")">Contact Us</a>
                     </div>
                     <div class="col-md-6">
                         <p>&copy; 2015. All rights reserved. <span class="text-warning">Website developed by: Elektron (yusuf.oguntola@gmail.com, 07061543553)</span></p>
