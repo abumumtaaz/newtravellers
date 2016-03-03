@@ -68,24 +68,32 @@
                 </div>
                 <div class="col-md-9">
                     <div class="mg-bn-forms">
-                        <form action="#">
+                        @using (Html.BeginForm("Index", "Home", FormMethod.Post))
+                        {
                             <div class="row">
                                 <div class="col-md-3 col-xs-6">
                                     <div class="input-group date mg-check-in">
-                                        <div class="input-group-addon"><i class="fa fa-calendar"></i></div>
-                                        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Check In">
+                                        <div class="input-group-addon"><i class="fa fa-calendar"></i>
+                                        </div>
+                                        <input type="text" class="form-control" placeholder="Check In Date" name="fromDate">
                                     </div>
                                 </div>
                                 <div class="col-md-3 col-xs-6">
-                                    <div class="input-group date mg-check-out">
-                                        <div class="input-group-addon"><i class="fa fa-calendar"></i></div>
-                                        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Check Out">
+                                    <div class="input-group">
+                                        <div class="input-group-addon"><i class="fa fa-home"></i>
+                                        </div>
+                                        @*<input class="form-control" placeholder="Room Type" type="text" name="room"/>*@
+                                        <select class="form-control selectpicker" name="room">
+                                            <option value="Executive Suite">Executive Suite</option>
+                                            <option value="Master Suite">Master Suite</option>
+                                            <option value="Single Suite">Single Suite</option>
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="col-md-3 col-sm-6">
                                     <div class="">
                                         <div class="">
-                                            <input class="form-control" placeholder="Phone" type="text"/>
+                                            <input class="form-control" placeholder="Phone" type="text" name="phone"/>
                                         </div>
                                     </div>
                                 </div>
@@ -93,13 +101,30 @@
                                     <button type="submit" class="btn btn-main btn-block">Book Now</button>
                                 </div>
                             </div>
-                        </form>
+                        }
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
+    <br/>
+    <div>
+        <div class="container">
+            <div class="row">
+                @if (ViewBag.Message != null)
+                {
+                    if (ViewBag.Status == "SUCCESS")
+                    {
+                        <div class="alert alert-success">@ViewBag.Message</div>
+                    }
+                    else
+                    {
+                        <div class="alert alert-danger">@ViewBag.Message</div>
+                    }
+                }
+            </div>
+        </div>
+    </div>
     <div class="mg-best-rooms">
         <div class="container">
             <div class="row">

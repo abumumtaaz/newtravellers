@@ -24,36 +24,54 @@
             </div>
         </div>
     </div>
-
+    <br/>
+    <div>
+        <div class="container">
+            <div class="row">
+                @if (ViewBag.Message != null)
+                {
+                    if (ViewBag.Status == "SUCCESS")
+                    {
+                        <div class="alert alert-success">@ViewBag.Message</div>
+                    }
+                    else
+                    {
+                        <div class="alert alert-danger">@ViewBag.Message</div>
+                    }
+                }
+            </div>
+        </div>
+    </div>
     <div class="mg-page">
         <div class="container">
             <div class="row">
 
                 <div class="col-md-5">
                     <h2 class="mg-sec-left-title">Drop us a message!</h2>
-                    <form class="clearfix">
+                    @using (Html.BeginForm("Contact", "Home", FormMethod.Post))
+                    {
                         <div class="mg-contact-form-input">
                             <label for="full-name">Full Name</label>
-                            <input type="text" class="form-control" id="full-name">
+                            <input type="text" class="form-control" id="full-name" name="name">
                         </div>
                         <div class="mg-contact-form-input">
                             <label for="email">E-mail</label>
-                            <input type="text" class="form-control" id="email">
+                            <input type="text" class="form-control" id="email" name="mail">
                         </div>
                         <div class="mg-contact-form-input">
                             <label for="phone">Phone</label>
-                            <input type="text" class="form-control" id="phone">
+                            <input type="text" class="form-control" id="phone" name="phone">
                         </div>
                         <div class="mg-contact-form-input">
                             <label for="subject">Subject</label>
-                            <input type="text" class="form-control" id="subject">
+                            <input type="text" class="form-control" id="subject" name="subject">
                         </div>
                         <div class="mg-contact-form-input">
                             <label for="message">Message</label>
-                            <textarea class="form-control" id="message" rows="5"></textarea>
+                            <textarea class="form-control" id="message" rows="5" name="message"></textarea>
                         </div>
                         <input type="submit" class="btn btn-dark-main pull-right" value="Send">
-                    </form>
+                    }
                 </div>
                 <div class="col-md-7">
                     <h2 class="mg-sec-left-title">Our Address</h2>
